@@ -67,10 +67,12 @@
 </head>
 <body>
 
-  <h1>You're up and running!</h1>
+  <h1>LATAR BELAKANG</h1>
 
   <p>
-    Next you can update your site name, avatar and other options using the <code>_config.yml</code> file in the root of your repository (shown below).
+    Selama pelaksanaan Praktik Kerja Lapangan (PKL), saya diberikan tugas untuk melakukan deployment aplikasi berbasis Laravel menggunakan Docker. Laravel sebagai framework PHP yang modern dan banyak digunakan, dipilih karena fleksibilitas dan fitur-fiturnya yang mendukung pengembangan aplikasi secara cepat dan terstruktur. Tugas ini tidak hanya menuntut pemahaman terhadap Laravel itu sendiri, tetapi juga kemampuan dalam mengelola infrastruktur aplikasi secara efisien melalui Docker dan Docker Compose.
+
+Pelaksanaan exam deploy ini menjadi pengalaman berharga dalam memahami prinsip DevOps dasar, serta meningkatkan kompetensi teknis di bidang backend development dan manajemen infrastruktur aplikasi. Selain itu, kegiatan ini juga mendukung tujuan PKL yaitu memperoleh pengalaman langsung
   </p>
 
   <div class="code-block">
