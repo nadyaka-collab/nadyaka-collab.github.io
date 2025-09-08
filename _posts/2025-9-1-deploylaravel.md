@@ -243,18 +243,15 @@ $ exit</pre>
 
     <p>Lalu jika setelah login akan muncul halaman dashboard yang merupakan halaman utama website SPP PAUD.</p>
 
-    <!-- Placeholder untuk gambar -->
-    <div class="image-container">
-        <h4>Tampilan Halaman Login</h4>
-        <img src="https://github.com/nadyaka-collab/nadyaka-collab.github.io/blob/3089d365ea5f84a1cebf9a51393142e44e8de20a/assest/images/login.png?raw=true" alt="Tampilan Halaman Login SPP PAUD">
-        <p><em>Gambar 1: Tampilan halaman login aplikasi SPP PAUD.</em></p>
-    </div>
-
-    <div class="image-container">
-        <h4>Tampilan Halaman Dashboard</h4>
-        <img src="https://github.com/nadyaka-collab/nadyaka-collab.github.io/blob/master/images/dasbord.png" alt="Tampilan Halaman Dashboard SPP PAUD">
-        <p><em>Gambar 2: Tampilan halaman dashboard setelah login berhasil.</em></p>
-    </div>
+- Cek aplikasi menggunakan browser
+![Cek Brower](/assets/images/login.png)
+  login menggunakan:
+   
+username: admin
+password: admin
+<br><br>
+Dashboard
+![Dasboard](/assets/images/dashboard.png)
 
     <h2>4. Kesimpulan</h2>
     <p>Setelah menjalankan perintah docker-compose up, maka:</p>
