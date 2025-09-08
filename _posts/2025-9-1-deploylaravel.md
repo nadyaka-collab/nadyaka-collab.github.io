@@ -252,7 +252,7 @@ $ exit</pre>
 
     <div class="image-container">
         <h4>Tampilan Halaman Dashboard</h4>
-        <img src="dasbord.png" alt="Tampilan Halaman Dashboard SPP PAUD">
+        <img src="https://github.com/nadyaka-collab/nadyaka-collab.github.io/blob/master/images/dasbord.png" alt="Tampilan Halaman Dashboard SPP PAUD">
         <p><em>Gambar 2: Tampilan halaman dashboard setelah login berhasil.</em></p>
     </div>
 
