@@ -1,5 +1,4 @@
-![Login](./_posts/login.png)
-![Dashboard](./_posts/dasbord.png)
+![_config.yml]({{ site.baseurl }}/images/config.png)
 <html lang="id">
 <head>
     <meta charset="UTF-8">
