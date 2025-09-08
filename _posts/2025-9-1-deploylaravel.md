@@ -246,4 +246,4 @@ $ exit</pre>
 </html>
 
 ![_config.yml]({{ site.baseurl }}/images/login.png)
-
+![_config.yml]({{ site.baseurl }}/images/dasbord.png)
