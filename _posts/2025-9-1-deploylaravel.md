@@ -1,146 +1,153 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Deploy Laravel dengan Docker - Nadyaka Shafwanas</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f8f9fa;
-      color: #333;
-      line-height: 1.7;
-      padding: 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h1, h2, h3 {
-      color: #2c3e50;
-    }
-    h1 {
-      text-align: center;
-      border-bottom: 3px solid #3498db;
-      padding-bottom: 10px;
-    }
-    h2 {
-      border-bottom: 2px solid #bdc3c7;
-      padding-bottom: 5px;
-      margin-top: 30px;
-    }
-    pre {
-      background-color: #2d3436;
-      color: #ecf0f1;
-      padding: 15px;
-      border-radius: 8px;
-      overflow-x: auto;
-      font-size: 14px;
-    }
-    code {
-      background-color: #ecf0f1;
-      color: #e74c3c;
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-family: Consolas, monospace;
-    }
-    ul, ol {
-      margin: 15px 0;
-    }
-    .footer {
-      text-align: center;
-      margin-top: 50px;
-      color: #7f8c8d;
-      font-size: 14px;
-    }
-    .comment {
-      background-color: #fffacd;
-      border-left: 4px solid #f1c40f;
-      padding: 10px;
-      margin: 15px 0;
-      font-style: italic;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deploy Laravel dengan Docker - Nadyaka Shafwana Salwa Rabbani</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            margin-top: 30px;
+            border-left: 5px solid #3498db;
+            padding-left: 10px;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        pre {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            border: 1px solid #444;
+            margin: 15px 0;
+        }
+        code {
+            background-color: #2d2d2d;
+            color: #d4d4d4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+        }
+        .note {
+            background-color: #fffde7;
+            border-left: 4px solid #ffd600;
+            padding: 10px;
+            margin: 15px 0;
+        }
+        .highlight {
+            background-color: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+            display: inline-block;
+            margin: 0 2px;
+        }
+    </style>
 </head>
 <body>
 
-  <h1>Deploy Laravel dengan Docker</h1>
-  <p><strong>Oleh: Nadyaka Shafwana Salwa Rabbani</strong></p>
+    <h1>Deploy Laravel dengan Docker</h1>
+    <p><strong>Oleh: Nadyaka Shafwana Salwa Rabbani</strong></p>
 
-  <h2>1. Latar Belakang</h2>
-  <p>
-    Selama pelaksanaan Praktik Kerja Lapangan (PKL), saya diberikan tugas untuk melakukan deployment aplikasi berbasis Laravel menggunakan Docker. Laravel sebagai framework PHP yang modern dan banyak digunakan, dipilih karena fleksibilitas dan fitur-fiturnya yang mendukung pengembangan aplikasi secara cepat dan terstruktur.
-  </p>
-  <p>
-    Tugas ini tidak hanya menuntut pemahaman terhadap Laravel itu sendiri, tetapi juga kemampuan dalam mengelola infrastruktur aplikasi secara efisien melalui Docker dan Docker Compose. Pelaksanaan exam deploy ini menjadi pengalaman berharga dalam memahami prinsip DevOps dasar, serta meningkatkan kompetensi teknis di bidang backend development dan manajemen infrastruktur aplikasi.
-  </p>
+    <h2>1. Latar Belakang</h2>
+    <p>Selama pelaksanaan Praktik Kerja Lapangan (PKL), saya diberikan tugas untuk melakukan deployment aplikasi berbasis Laravel menggunakan Docker.</p>
+    <p>Laravel sebagai framework PHP yang modern dan banyak digunakan, dipilih karena fleksibilitas dan fitur-fiturnya yang mendukung pengembangan aplikasi secara cepat dan terstruktur. Tugas ini tidak hanya menuntut pemahaman terhadap Laravel itu sendiri, tetapi juga kemampuan dalam mengelola infrastruktur aplikasi secara efisien melalui Docker dan Docker Compose.</p>
+    <p>Pelaksanaan exam deploy ini menjadi pengalaman berharga dalam memahami prinsip DevOps dasar, serta meningkatkan kompetensi teknis di bidang backend development dan manajemen infrastruktur aplikasi. Selain itu, kegiatan ini juga mendukung tujuan PKL yaitu memperoleh pengalaman langsung.</p>
 
-  <h2>2. Pengertian</h2>
-  <p><strong>Docker</strong> adalah teknologi yang memungkinkan kita mengemas aplikasi beserta semua kebutuhannya (seperti PHP, database, web server) ke dalam satu wadah kecil yang disebut <em>container</em>.</p>
-  <p><strong>Laravel</strong> adalah framework PHP yang membantu developer membuat aplikasi web dengan lebih cepat dan rapi. Bayangkan Laravel seperti "pabrik siap pakai" buat bikin website — sudah ada fitur login, database, form, dan lain-lain, jadi nggak perlu bikin dari nol.</p>
+    <h2>2. Pengertian</h2>
+    <p><strong>Docker</strong> adalah teknologi yang memungkinkan kita mengemas aplikasi beserta semua kebutuhannya (seperti PHP, database, web server) ke dalam satu wadah kecil yang disebut container. Dan Docker tersebut mempunyai banyak keunggulan.</p>
+    <p><strong>Laravel</strong> adalah framework PHP (kerangka kerja untuk membuat website) yang membantu developer membuat aplikasi web dengan lebih cepat dan rapi. Bayangkan Laravel seperti "pabrik siap pakai" buat bikin website — sudah ada fitur login, database, form, dan lain-lain, jadi nggak perlu bikin dari nol.</p>
 
-  <h2>3. Pengerjaan Exam</h2>
+    <h2>3. Pengerjaan Exam</h2>
 
-  <h3>A. Setup</h3>
-  <ul>
-    <li>Ubuntu 22.04 (VirtualBox)</li>
-    <li>Dockerfile</li>
-    <li>docker-compose.yml</li>
-    <li>coding.conf</li>
-    <li>build.sh</li>
-  </ul>
+    <h3>A. Setup</h3>
+    <ul>
+        <li>Ubuntu 22.04 (VirtualBox)</li>
+        <li>Dockerfile</li>
+        <li>Docker-compose.yml</li>
+        <li>Coding.conf</li>
+        <li>build.sh</li>
+    </ul>
 
-  <h3>B. Membuat Folder Penempatan</h3>
-  <p>Buat folder untuk menampung semua file deployment.</p>
-  <pre>mkdir warza
-cd warza</pre>
+    <h3>B. Membuat Folder Penempatan</h3>
+    <p>Disini kita membuat folder yang dimana akan menjadi tempat untuk semua file yang akan dilakukan deployment.</p>
+    <pre>$ mkdir warza
+$ cd warza</pre>
 
-  <h3>C. Menyalin Folder</h3>
-  <p>Saya menyalin folder menggunakan WinSCP dari folder exam ke VM <code>pod-managed1</code> menuju folder <code>warza/</code>.</p>
+    <h3>C. Menyalin Folder</h3>
+    <p>Saya menyalin folder menggunakan WinSCP dikarenakan mudah untuk digunakan, disini saya menyalin dari folder exam menuju vm pod-managed1 menuju folder warza/</p>
 
-  <h3>D. Membuat Dockerfile</h3>
-  <pre>FROM php:7.2-fpm
+    <h3>D. Membuat File Dockerfile</h3>
+    <p>Kita membuat file bernama Dockerfile yang dimana file ini berisikan kumpulan instruksi atau perintah untuk membuat sebuah Docker image.</p>
 
-# Ganti mirror Debian untuk menghindari error 404
-RUN sed -i 's/deb.debian.org/archive.debian.org/g' /etc/apt/sources.list && \
-    sed -i 's/security.debian.org/archive.debian.org/g' /etc/apt/sources.list && \
-    echo 'Acquire::Check-Valid-Until "false";' > /etc/apt/apt.conf.d/99no-check-valid-until
+    <ul>
+        <li>Memulai dari image dasar php:7.4-fpm versi PHP yang stabil dan cocok untuk Laravel lama.</li>
+        <li>Menginstal dependensi sistem (seperti git, curl, zip) dan ekstensi PHP (pdo_mysql, gd, mbstring) yang wajib ada agar Laravel bisa berjalan sempurna — termasuk upload gambar, koneksi database, dan manipulasi string.</li>
+        <li>Menyalin Composer (manajer paket PHP) langsung dari image resminya efisien dan cepat.</li>
+        <li>Menyalin seluruh kode aplikasi Laravel dari folder lokal ke dalam container, tepatnya di /var/www/html.</li>
+        <li>Menyalin skrip setup.sh dan memberinya izin eksekusi.</li>
+        <li>Menjadikan setup.sh sebagai perintah utama yang otomatis jalan saat container dinyalakan.</li>
+    </ul>
 
-# Install dependensi
+    <pre>FROM php:7.4-fpm
 RUN apt-get update && apt-get install -y \
-    git \
-    curl \
-    zip \
-    unzip \
-    libonig-dev \
-    libzip-dev \
-    libpng-dev \
+    git curl zip unzip libonig-dev libzip-dev libpng-dev \
     && docker-php-ext-install pdo pdo_mysql mbstring zip gd
 
-# Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www/html
-
-# Salin kode Laravel dan skrip build
 COPY ./spp-laravel/spp /var/www/html
-COPY build.sh /build.sh
+COPY setup.sh /setup.sh
+RUN chmod +x /setup.sh
 
-RUN chmod +x /build.sh
+ENTRYPOINT ["/setup.sh"]</pre>
 
-ENTRYPOINT ["/build.sh"]</pre>
+    <h3>E. Membuat File docker-compose.yml</h3>
+    <p>File ini mengatur beberapa layanan dalam satu komposisi, agar saat kita menjalankan tidak perlu manual menggunakan docker run.</p>
 
-  <p><strong>Penjelasan Singkat:</strong></p>
-  <ul>
-    <li><code>FROM php:7.2-fpm</code>: Gunakan image PHP 7.2 dengan FPM.</li>
-    <li><code>RUN</code>: Instal paket dan ekstensi PHP.</li>
-    <li><code>COPY --from=composer</code>: Salin Composer dari image resmi.</li>
-    <li><code>WORKDIR</code>: Set direktori kerja ke <code>/var/www/html</code>.</li>
-    <li><code>ENTRYPOINT ["/build.sh"]</code>: Jalankan skrip saat container dimulai.</li>
-  </ul>
+    <ul>
+        <li>Layanan app dibangun dari Dockerfile di direktori saat ini , diberi nama spp-nadyaka, dan membuka port 8000 agar bisa diakses dari browser.</li>
+        <li>Layanan db menggunakan image MySQL 5.7, membuat database bernama spp secara otomatis, dan mengimpor struktur + data dari file spp.sql yang dimount ke direktori khusus MySQL (/docker-entrypoint-initdb.d/) agar database langsung terisi saat pertama kali container dijalankan.</li>
+        <li>depends_on: - db memastikan container aplikasi hanya jalan setelah MySQL siap, mencegah error koneksi database.</li>
+        <li>restart: unless-stopped membuat container otomatis bangkit kembali jika crash, sangat berguna untuk lingkungan produksi atau ujian.</li>
+    </ul>
 
-  <h3>E. Membuat docker-compose.yml</h3>
-  <pre>version: '3.8'
-
-services:
+    <pre>services:
   app:
     build: .
     container_name: spp-nadyaka
@@ -162,20 +169,19 @@ services:
       - "3306:3306"
     restart: unless-stopped</pre>
 
-  <p><strong>Penjelasan:</strong></p>
-  <ul>
-    <li><code>build: .</code>: Build image dari Dockerfile di direktori saat ini.</li>
-    <li><code>container_name</code>: Beri nama container.</li>
-    <li><code>ports</code>: Mapping port host ke container.</li>
-    <li><code>depends_on</code>: Service <code>app</code> bergantung pada <code>db</code>.</li>
-    <li><code>restart: unless-stopped</code>: Auto-restart container.</li>
-  </ul>
+    <h3>F. Konfigurasi Nginx (coding.conf)</h3>
+    <p>File ini mengatur bagaimana Nginx melayani aplikasi Laravel. Kalau ada yang buka http://localhost:8000/login, Nginx cek dulu file-nya ada atau enggak. Kalau enggak, langsung lempar ke index.php (ini fitur Laravel untuk routing).</p>
 
-  <h3>F. Konfigurasi Nginx (coding.conf)</h3>
-  <pre>server {
+    <ul>
+        <li>Mendengarkan permintaan di port 8000.</li>
+        <li>Menjadikan folder /var/www/html/public sebagai root — sesuai struktur Laravel.</li>
+        <li>location / mengatur routing: jika file/folder tidak ditemukan, lempar ke index.php — inilah yang membuat URL seperti /login atau /dashboard tetap bekerja meskipun tidak ada file fisik bernama itu.</li>
+        <li>location ~ \.php$ mengarahkan semua request PHP ke service bernama laravel di port 9000 (PHP-FPM) — meskipun dalam kasus ini, karena pakai artisan serve, bagian ini belum aktif. Tapi konfigurasi ini penting jika suatu saat ingin migrasi ke Nginx + PHP-FPM.</li>
+    </ul>
+
+    <pre>server {
     listen 8000;
     index index.php index.html;
-    server_name localhost;
     root /var/www/html/public;
 
     location / {
@@ -184,81 +190,81 @@ services:
 
     location ~ \.php$ {
         include fastcgi_params;
-        fastcgi_pass app:9000;
+        fastcgi_pass laravel:9000;
         fastcgi_index index.php;
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-        fastcgi_param PATH_INFO $fastcgi_path_info;
-    }
-
-    location ~ /\.ht {
-        deny all;
     }
 }</pre>
 
-  <p><strong>Penjelasan:</strong></p>
-  <ul>
-    <li><code>listen 8000</code>: Nginx mendengarkan port 8000.</li>
-    <li><code>root /var/www/html/public</code>: Direktori public Laravel.</li>
-    <li><code>try_files</code>: Routing otomatis ke <code>index.php</code>.</li>
-    <li><code>fastcgi_pass app:9000</code>: Kirim request PHP ke service <code>app</code>.</li>
-  </ul>
+    <h3>G. Skrip Otomatisasi (build.sh)</h3>
+    <p>Ini adalah skrip ajaib yang otomatis menjalankan perintah Laravel saat container hidup.</p>
 
-  <div class="comment">
-    Catatan: Pastikan service Nginx ditambahkan di <code>docker-compose.yml</code> jika belum ada.
-  </div>
+    <ul>
+        <li>Masuk ke folder aplikasi Laravel — tempat semua kode program disimpan.</li>
+        <li>Pasang semua library yang dibutuhkan. Pakai perintah composer install --no-dev --optimize-autoloader: Tidak pasang tools buat developer (biar lebih ringan) dan optimalkan autoloader agar aplikasi jalan lebih cepat.</li>
+        <li>Siapkan database. Pakai perintah php artisan migrate --force: Buat tabel-tabel di database sesuai struktur Laravel. --force dipakai karena di Docker dianggap lingkungan “produksi”, jadi perlu paksa biar migrasi jalan.</li>
+        <li>Nyalakan server Laravel. Pakai perintah php artisan serve --host=0.0.0.0 --port=8000: Server jalan di port 8000 dan bisa diakses dari luar container (misalnya lewat browser di laptop kamu).</li>
+    </ul>
 
-  <h3>G. Skrip Otomatisasi (build.sh)</h3>
-  <pre>#!/bin/bash
-
+    <pre>#!/bin/bash
 cd /var/www/html
+composer install --no-dev --optimize-autoloader
+php artisan migrate --force
+php artisan serve --host=0.0.0.0 --port=8000</pre>
 
-php artisan key:generate
-php artisan migrate
-php artisan db:seed
-php-fpm</pre>
+    <h3>H. Jalankan Compose</h3>
+    <p>Disini saya menjalankan docker compose agar file yang kita buat tadi berjalan dan otomatis membuat container.</p>
+    <pre>$ docker-compose up --build</pre>
+    <p>Tunggu hingga selesai, lalu...</p>
 
-  <p><strong>Penjelasan:</strong></p>
-  <ul>
-    <li><code>key:generate</code>: Generate aplikasi key Laravel.</li>
-    <li><code>migrate</code>: Jalankan migrasi database.</li>
-    <li><code>db:seed</code>: Isi data awal.</li>
-    <li><code>php-fpm</code>: Jalankan PHP-FPM agar container tetap hidup.</li>
-  </ul>
+    <h3>I. Mengatur Permission pada Container (Opsional)</h3>
+    <p class="note">Kenapa disini saya bilang opsional, karena saat saya docker compose up, sudah langsung bisa diakses. Dan apabila ada error saat mengakses web, biasanya ada kendala terkait permission di container, jadi bisa mengikuti langkah-langkah di bawah ini.</p>
 
-  <h3>H. Menjalankan Docker Compose</h3>
-  <pre>docker-compose up --build -d</pre>
-  <p>Tunggu hingga proses selesai.</p>
+    <p>Jika sudah masuk ke dalam container laravel_spp:</p>
+    <pre>$ docker exec -it laravel_spp /bin/bash</pre>
 
-  <p>Masuk ke container:</p>
-  <pre>docker exec -it spp-nadyaka /bin/bash</pre>
+    <p>Langkah selanjutnya mengubah permission dengan chmod & chown:</p>
+    <pre>$ chown -R www-data:www-data storage bootstrap/cache
+$ chmod -R 755 /var/www/html
+$ exit</pre>
 
-  <p>Atur permission:</p>
-  <pre>chown -R www-data:www-data storage bootstrap/cache
-chmod -R 755 /var/www/html
-exit</pre>
+    <p><strong>Penjelasan:</strong></p>
+    <ul>
+        <li>chown -R www-data:www-data storage bootstrap/cache: Perintah ini mengubah pemilik (owner) dari folder storage dan bootstrap/cache ke pengguna dan grup www-data.</li>
+        <li>chmod -R 755 /var/www/html: Perintah ini memberikan izin (permission) pada semua file dan folder di /var/www/html.</li>
+    </ul>
 
-  <h3>I. Pengujian Web</h3>
-  <p>Buka di browser:</p>
-  <pre>http://localhost:8000/login</pre>
-  <p><strong>Login:</strong></p>
-  <ul>
-    <li><strong>Email:</strong> admin@example.com</li>
-    <li><strong>Password:</strong> password</li>
-  </ul>
-  <p>Setelah login, akan muncul halaman dashboard SPP PAUD.</p>
+    <h3>J. Pengujian Web</h3>
+    <p>Disini akan muncul halaman login yang dimana saya memasukan email dan password dengan:</p>
+    <ul>
+        <li><strong>Email:</strong> admin@example.com</li>
+        <li><strong>Password:</strong> password</li>
+    </ul>
 
-  <h2>4. Kesimpulan</h2>
-  <p>Setelah menjalankan <code>docker-compose up</code>:</p>
-  <ul>
-    <li>Container MySQL berjalan dengan database <code>spp</code> yang sudah diimpor dari <code>spp.sql</code>.</li>
-    <li>Container Laravel melakukan migrasi dan seeding data.</li>
-    <li>Nginx menerima request dan mengarahkan ke PHP-FPM.</li>
-  </ul>
-  <p>Proses ini menunjukkan integrasi sempurna antara Laravel, Docker, dan MySQL untuk deployment aplikasi web modern.</p>
+    <p>Lalu jika setelah login akan muncul halaman dashboard yang merupakan halaman utama website SPP PAUD.</p>
 
-  <div class="footer">
-    &copy; 2025 Nadyaka Shafwana Salwa Rabbani | Dokumentasi PKL - Deploy Laravel dengan Docker
-  </div>
+    <!-- Placeholder untuk gambar -->
+    <div class="image-container">
+        <h4>Tampilan Halaman Login</h4>
+        <img src="login.png" alt="Tampilan Halaman Login SPP PAUD">
+        <p><em>Gambar 1: Tampilan halaman login aplikasi SPP PAUD.</em></p>
+    </div>
+
+    <div class="image-container">
+        <h4>Tampilan Halaman Dashboard</h4>
+        <img src="dasbord.png" alt="Tampilan Halaman Dashboard SPP PAUD">
+        <p><em>Gambar 2: Tampilan halaman dashboard setelah login berhasil.</em></p>
+    </div>
+
+    <h2>4. Kesimpulan</h2>
+    <p>Setelah menjalankan perintah docker-compose up, maka:</p>
+    <ul>
+        <li>Container MySQL berjalan dengan database spp yang sudah diimpor dari spp.sql.</li>
+        <li>Container Laravel melakukan migrasi dan seeding data.</li>
+        <li>Nginx menerima request dan mengarahkan ke PHP-FPM.</li>
+    </ul>
+
+    <p><strong>--- Dokumen Selesai ---</strong></p>
 
 </body>
 </html>
