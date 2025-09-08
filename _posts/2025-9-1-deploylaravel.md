@@ -1,4 +1,4 @@
-![_posts/login.png](_posts/login.png)
+![login.png](_posts/login.png)
 ![_posts/dasbord.png](_posts/dasbord.png)
 <html lang="id">
 <head>
