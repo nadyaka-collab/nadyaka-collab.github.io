@@ -242,8 +242,19 @@ $ exit</pre>
     </ul>
 
     <p>Lalu jika setelah login akan muncul halaman dashboard yang merupakan halaman utama website SPP PAUD.</p>
-</body>
-</html>
 
 ![_config.yml]({{ site.baseurl }}/images/login.png)
 ![_config.yml]({{ site.baseurl }}/images/dasbord.png)
+
+ <h2>4. Kesimpulan</h2>
+    <p>Setelah menjalankan perintah docker-compose up, maka:</p>
+    <ul>
+        <li>Container MySQL berjalan dengan database spp yang sudah diimpor dari spp.sql.</li>
+        <li>Container Laravel melakukan migrasi dan seeding data.</li>
+        <li>Nginx menerima request dan mengarahkan ke PHP-FPM.</li>
+    </ul>
+
+    <p><strong>--- Dokumen Selesai ---</strong></p>
+
+</body>
+</html>
