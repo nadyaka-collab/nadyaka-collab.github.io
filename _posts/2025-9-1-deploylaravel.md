@@ -253,5 +253,5 @@ username: admin
 password: admin
 <br><br>
 Dashboard
-![Dasboard](/assets/images/dashboard.png)
+![Dasboard](/assets/images/dasbord.png)
 
