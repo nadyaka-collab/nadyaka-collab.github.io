@@ -246,7 +246,7 @@ $ exit</pre>
     <!-- Placeholder untuk gambar -->
     <div class="image-container">
         <h4>Tampilan Halaman Login</h4>
-        <img src="images/login.png" alt="Tampilan Halaman Login SPP PAUD">
+        <img src="/_posts/login.png" alt="Tampilan Halaman Login SPP PAUD">
         <p><em>Gambar 1: Tampilan halaman login aplikasi SPP PAUD.</em></p>
     </div>
 
