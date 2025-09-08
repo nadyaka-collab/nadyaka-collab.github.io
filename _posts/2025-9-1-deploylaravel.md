@@ -1,5 +1,5 @@
 ![login.png](_posts/login.png)
-![_posts/dasbord.png](_posts/dasbord.png)
+![dasbord.png](_posts/dasbord.png)
 <html lang="id">
 <head>
     <meta charset="UTF-8">
