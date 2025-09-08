@@ -246,7 +246,7 @@ $ exit</pre>
     <!-- Placeholder untuk gambar -->
     <div class="image-container">
         <h4>Tampilan Halaman Login</h4>
-        <img src="/_posts/login.png" alt="Tampilan Halaman Login SPP PAUD">
+        <img src="[/_posts/login.png](https://github.com/nadyaka-collab/nadyaka-collab.github.io/blob/3089d365ea5f84a1cebf9a51393142e44e8de20a/assest/images/login.png?raw=true)" alt="Tampilan Halaman Login SPP PAUD">
         <p><em>Gambar 1: Tampilan halaman login aplikasi SPP PAUD.</em></p>
     </div>
 
