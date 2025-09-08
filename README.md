@@ -120,8 +120,8 @@ You can start by [opening an issue](https://github.com/barryclark/jekyll-now/iss
 I want to keep Jekyll Now as minimal as possible. Every line of code should be one that's useful to 90% of the people using it. Please bear that in mind when submitting feature requests. If it's not something that most people will use, it probably won't get merged. :guardsman:
 
 
-![Tampilan Halaman Login](images/login-screenshot.png)
+![Tampilan Halaman Login](images/login.png)
 *Gambar 1: Halaman Login SPP PAUD*
 
-![Tampilan Halaman Dashboard](images/dashboard-screenshot.png)
+![Tampilan Halaman Dashboard](images/dasbord.png)
 *Gambar 2: Halaman Dashboard setelah login*
