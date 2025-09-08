@@ -1,4 +1,4 @@
-![_config.yml]({{ site.baseurl }}/images/config.png)
+
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -245,6 +245,5 @@ $ exit</pre>
 </body>
 </html>
 
-![_posts/login.png](_posts/login.png)
-![_posts/dasbord.png](_posts/dasbord.png)
+![_config.yml]({{ site.baseurl }}/images/login.png)
 
