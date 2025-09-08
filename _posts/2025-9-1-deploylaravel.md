@@ -1,4 +1,5 @@
-
+![_posts/login.png](_posts/login.png)
+![_posts/dasbord.png](_posts/dasbord.png)
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -246,5 +247,5 @@ $ exit</pre>
 </html>
 
 ![_posts/login.png](_posts/login.png)
-![_posts/dashboard.png](_posts/dashboard.png)
+![_posts/dasbord.png](_posts/dasbord.png)
 
