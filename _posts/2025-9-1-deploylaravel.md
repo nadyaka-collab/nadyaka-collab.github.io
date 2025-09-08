@@ -245,13 +245,6 @@ $ exit</pre>
 </body>
 </html>
 
-- Cek aplikasi menggunakan browser
-![Cek Brower](/assets/images/login.png)
-  login menggunakan:
-   
-username: admin
-password: admin
-<br><br>
-Dashboard
-![Dasboard](/assets/images/dasbord.png)
+![_posts/login.png](_posts/login.png)
+![_posts/dashboard.png](_posts/dashboard.png)
 
